@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio An VU</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!--<link rel="stylesheet" href="./css/style-bg.css" />
+    <link rel="stylesheet" href="./css/style.css" />-->
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!--
+  <header>
+    <nav class="navbar">
+      <div>
+        <img src="/img/dog.jpeg" alt="profil An VU" class="profile-photo" />
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="#about" class="link">À Propos</a></li>
+        <li><a href="#projects" class="link">Projets</a></li>
+        <li><a href="#education" class="link">Formation</a></li>
+        <li><a href="#contact" class="link">Contact</a></li>
+      </ul>
+
+      <div class="theme-switch-wrapper">
+        <span id="dark-mode-text">Sombre</span>
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <span id="light-mode-text">Clair</span>
+      </div>
+    </nav>
+  </header>
+
+<main>
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <section class="parallax-section">
+      <h1 class="title-job">
+        <span class="dev-web" id="typewriter-h1">développeur web</span>
+      </h1>
+      <br />
+      <h2 class="title-name">
+        <span class="an-vu" id="typewriter-h2">An VU</span>
+      </h2>
+      <button id="about-btn" class="skeuomorphic-btn">Plus d'Info</button>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="block">
+        <h2 class="hidden"> A propos de moi</h2>
+        <p class="seo-kw hidden">Avec plus de 18 ans d'expérience dans l'industrie de la mode, où j'ai évolué dans la partie <span>CAO/DAO (Conception Assistée par Ordinateur / Dessin Assisté par Ordinateur)</span>, j'ai développé une grande aisance avec les outils informatiques et une sensibilité particulière pour le <span>design et l'esthétique</span>. Aujourd'hui, je mets cette expertise au service de la <span>création de sites web interactifs et modernes</span>, en utilisant des technologies comme <span>HTML, CSS, JavaScript et React</span>.</p>
+        <p class="seo-kw hidden">Grâce à mon parcours, je conçois des sites internet alliant <span>design responsive</span>, <span>expérience utilisateur optimisée </span>(UX/UI) et une <span>navigation fluide</span>. J'intègre également les meilleures pratiques pour un <span>chargement rapide</span> et un meilleur <span>référencement naturel (SEO)</span>. Mon objectif est de proposer des solutions personnalisées qui répondent non seulement aux exigences techniques, mais qui traduisent également l'<span>identité visuelle</span> unique de chaque projet.</p>
+      </div>
+      <div class="v-arrow-container">
+        <div class="v-arrow"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="block">
+        <h2 class="hidden">Projets</h2>
+        <p>
+          Au cours de ma formation Développement Web & Mobile, je réaliserai
+          plusieurs répliques d'applications Web et d'applications Mobiles
+        </p>
+      </div>
+      
+      <div class="project">
+        <div>
+          <h3>Titre</h3>
+          <h4>type de projet</h4>
+          <ul>
+            <li>Envoi automatisé de mails</li>
+            <li>Carousel de photos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="carousel-container">
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+          <img class="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" data-text="Voici le texte pour l'image 1" data-link="https://example.com/1"/>
+          <img class="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" data-text="Voici le texte pour l'image 2" data-link="https://example.com/1"/>
+          <img class="image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" data-text="Voici le texte pour l'image 3" data-link="https://example.com/1"/>
+          <img class="image" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" data-text="Voici le texte pour l'image 4" data-link="https://example.com/1"/>
+          <img class="image" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" data-text="Voici le texte pour l'image 5" data-link="https://example.com/1"/>
+          <img class="image" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" data-text="Voici le texte pour l'image 6" data-link="https://example.com/1"/>
+          <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" data-text="Voici le texte pour l'image 7" data-link="https://example.com/1"/>
+          <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" data-text="Voici le texte pour l'image 8" data-link="https://example.com/1"/>
+        </div>
+     
+        <div id="modal" class="modal">
+          <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <p id="modal-text"></p>
+          <a id="modal-link" href="#" target="_blank">
+            <button id="modal-btn" class="skeuomorphic-btn">Visiter le site</button>
+          </a>
+          </div>
+        </div>
+        <input type="range" min="0" max="100" value="0" class="slider" id="carousel-slider">
+      </div>  
+        
+    </section>
+
+    <section id="education" class="education-section">
+      <h2>Formation</h2>
+          <p>Les technologies sur lesquelles je me forme actuellement :</p>
+          <div>
+            <img src="/img/html.png" />
+            <img src="/img/css.png" />
+            <img src="/img/javascript.png" />
+          </div>
+          <div>
+            <img src="/img/react.png" />
+            <img src="/img/wordpress-logo.webp" />
+          </div>
+        </section>
+ 
+    </section>
+
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <div>
+          <img src="/img/mail.jpg" target="_blank" />
+          <p><a href=" " blank>blablabla@gmail.com</a></p>
+        </div>
+        <div>
+          <img src="/img/linkedin.png" target="_blank" />
+          <p>
+            <a href="https://www.linkedin.com/" blank
+              >https://www.linkedin.com/</a
+            >
+          </p>
+        </div>
+        <div>
+          <img src="/img/github.png" target="_blank" />
+          <p><a href="https://github.com/" blank>https://github.com/</a></p>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projet réalisé par An VU/p>
+    <p>Tous droits réservés</p>
+    <p>Plan du Site</p>
+    <p>Mentions Légales</p>
+  </footer>  -->
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

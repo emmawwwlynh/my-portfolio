@@ -1,0 +1,141 @@
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: var(--bg-color1);
+}
+
+/*.profile-container {
+  flex: 0 0 auto;
+}*/
+
+.profilePhoto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: var(--color-border) 1px solid;
+}
+
+.navMenu {
+  display: flex;
+  gap: 30px;
+}
+
+.navMenu li {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+}
+
+.navMenu a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 22px;
+  transition: color 0.3s ease-out;
+}
+
+.navMenu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-solid);
+  transition: width 0.3s ease-out;
+}
+
+.navMenu li:hover::after {
+  width: 100%;
+}
+
+.navMenu a:hover {
+  color: var(--color-solid);
+}
+
+.navMenu li:hover a {
+  color: var(--color-solid);
+}
+
+.navbar {
+  transition: top 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Conteneur du switch */
+.themeSwitchWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: red 1px solid;
+}
+
+/* Style du texte sombre et clair */
+.darkModeText,
+.lightModeText {
+  font-size: 14px;
+}
+
+/* Style de l'élément switch */
+.themeSwitch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+.themeSwitch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style de la slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-button);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--text-color);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Quand le switch est activé */
+input:checked + .slider {
+  background-color: var(--color-border);
+}
+
+input:checked + .slider:before {
+  transform: translateX(35px);
+}
+
+/* Style pour un slider arrondi */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

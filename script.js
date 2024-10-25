@@ -1,19 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Fonction sombre et clair
-  const checkbox = document.getElementById("checkbox");
-  const bodyElement = document.body;
+  // Sélectionnez le bouton burger et le menu
+  const burgerMenu = document.getElementById("burgerMenu");
+  const navBar = document.querySelector(".navbar");
+  const navLinks = document.querySelectorAll(".nav-menu li a");
 
-  if (checkbox) {
-    // Vérifiez si un thème est déjà défini dans le localStorage
-    const currentTheme = localStorage.getItem("theme") || "dark-theme";
-    bodyElement.classList.add(currentTheme);
-    checkbox.checked = currentTheme === "light-theme";
-
-    checkbox.addEventListener("change", () => {
-      const newTheme = checkbox.checked ? "light-theme" : "dark-theme";
-      bodyElement.classList.remove("light-theme", "dark-theme");
-      bodyElement.classList.add(newTheme);
-      localStorage.setItem("theme", newTheme);
+  // Ajouter un événement pour basculer la classe "active"
+  if (burgerMenu && navBar) {
+    burgerMenu.addEventListener("click", () => {
+      navBar.classList.toggle("active");
+    });
+  }
+  // Fermer le menu burger lorsque l'utilisateur clique sur un lien de navigation
+  if (navLinks.length && navBar && navLinks) {
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navBar.classList.remove("active");
+      });
     });
   }
 
@@ -79,6 +81,24 @@ document.addEventListener("DOMContentLoaded", () => {
     typeWriter();
   }
 
+  // Fonction sombre et clair
+  const checkbox = document.getElementById("checkbox");
+  const bodyElement = document.body;
+
+  if (checkbox) {
+    // Vérifiez si un thème est déjà défini dans le localStorage
+    const currentTheme = localStorage.getItem("theme") || "dark-theme";
+    bodyElement.classList.add(currentTheme);
+    checkbox.checked = currentTheme === "light-theme";
+
+    checkbox.addEventListener("change", () => {
+      const newTheme = checkbox.checked ? "light-theme" : "dark-theme";
+      bodyElement.classList.remove("light-theme", "dark-theme");
+      bodyElement.classList.add(newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  }
+
   // Fonction affichage navbar au scroll
   let lastScrollTop = 0;
   const navbar = document.querySelector(".navbar");
@@ -121,28 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Fonction apparition texte au scroll vers le bas
-  /*let scrollTimeout;
-
-  window.addEventListener("scroll", () => {
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
-    }
-
-    scrollTimeout = setTimeout(() => {
-      document.querySelectorAll(".block").forEach((section) => {
-        const { top } = section.getBoundingClientRect();
-        if (top < window.innerHeight - 100) {
-          section.querySelectorAll("h2, p").forEach((el) => {
-            if (!el.classList.contains("visible-p")) {
-              el.classList.add("visible-p");
-            }
-          });
-        }
-      });
-    }, 200);
-  });
-  */
   const blocks = document.querySelectorAll(".block");
   const observer = new IntersectionObserver(
     (entries) => {
@@ -226,4 +224,9 @@ document.addEventListener("DOMContentLoaded", () => {
       return re.test(email);
 } 
   }*/
+
+  /* Défilement dynamique du texte #message */
+  document.getElementById("message").addEventListener("input", function () {
+    this.scrollTop = this.scrollHeight;
+  });
 });

@@ -1,10 +1,30 @@
+/* Variables pour le mode sombre */
+body.dark-theme {
+  --bg-color1: #1e1523;
+  --bg-color2: #301c3b;
+  --color-button: #512454;
+  --color-border: #8457aa;
+  --color-solid: #9a5cd0;
+  --text-color: #ecd9fa;
+}
+
+/* Variables pour le mode clair */
+body.light-theme {
+  --bg-color1: #fefcfe;
+  --bg-color2: #f2e2fc;
+  --color-button: #e0c4f4;
+  --color-border: #be93e4;
+  --color-solid: #8347b9;
+  --text-color: #402060;
+}
+
 .background {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgb(var(--bg-color1));
+  background: var(--bg-color1);
   overflow: hidden;
   z-index: -1;
 }
@@ -16,13 +36,13 @@
   backface-visibility: hidden;
   position: absolute;
   animation: move;
-  animation-duration: 40s;
+  animation-duration: 40;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 .background span:nth-child(0) {
-  color: rgb(var(--color-border));
+  color: var(--color-border);
   top: 86%;
   left: 83%;
   animation-duration: 92s;
@@ -31,7 +51,7 @@
   box-shadow: 30vmin 0 2.119057628585743vmin currentColor;
 }
 .background span:nth-child(1) {
-  color: rgb(var(--bg-color2));
+  color: var(--bg-color2);
   top: 15%;
   left: 3%;
   animation-duration: 41s;
@@ -40,7 +60,7 @@
   box-shadow: -30vmin 0 2.187828616226069vmin currentColor;
 }
 .background span:nth-child(2) {
-  color: rgb(var(--color-button));
+  color: var(--color-button);
   top: 24%;
   left: 50%;
   animation-duration: 23s;
@@ -49,7 +69,7 @@
   box-shadow: 30vmin 0 2.139333131974424vmin currentColor;
 }
 .background span:nth-child(3) {
-  color: rgb(var(--color-solid));
+  color: var(--color-solid);
   top: 50%;
   left: 25%;
   animation-duration: 77s;
@@ -58,7 +78,7 @@
   box-shadow: -30vmin 0 2.222146042276109vmin currentColor;
 }
 .background span:nth-child(4) {
-  color: rgb(var(--bg-color1));
+  color: var(--bg-color2);
   top: 87%;
   left: 96%;
   animation-duration: 83s;
@@ -67,7 +87,7 @@
   box-shadow: -30vmin 0 2.0682592040474876vmin currentColor;
 }
 .background span:nth-child(5) {
-  color: rgb(var(--text-color));
+  color: var(--text-color);
   top: 99%;
   left: 71%;
   animation-duration: 10s;
@@ -76,7 +96,7 @@
   box-shadow: -30vmin 0 1.8824032593764381vmin currentColor;
 }
 .background span:nth-child(6) {
-  color: rgb(var(--color-solid));
+  color: var(--color-solid);
   top: 36%;
   left: 28%;
   animation-duration: 21s;
@@ -85,7 +105,7 @@
   box-shadow: 30vmin 0 1.9759915411230269vmin currentColor;
 }
 .background span:nth-child(7) {
-  color: rgb(var(--bg-color2));
+  color: var(--bg-color2);
   top: 97%;
   left: 83%;
   animation-duration: 39s;
@@ -94,7 +114,7 @@
   box-shadow: -30vmin 0 2.040468844666859vmin currentColor;
 }
 .background span:nth-child(8) {
-  color: rgb(var(--text-color));
+  color: var(--text-color);
   top: 50%;
   left: 84%;
   animation-duration: 77s;
@@ -103,7 +123,7 @@
   box-shadow: 30vmin 0 2.1425693534719304vmin currentColor;
 }
 .background span:nth-child(9) {
-  color: rgb(var(--color-button));
+  color: var(--color-button);
   top: 6%;
   left: 61%;
   animation-duration: 21s;
@@ -112,7 +132,7 @@
   box-shadow: 30vmin 0 2.3230224075082298vmin currentColor;
 }
 .background span:nth-child(10) {
-  color: rgb(var(--color-solid));
+  color: var(--color-solid);
   top: 34%;
   left: 82%;
   animation-duration: 33s;
@@ -121,7 +141,7 @@
   box-shadow: -30vmin 0 2.2931415198959804vmin currentColor;
 }
 .background span:nth-child(11) {
-  color: rgb(var(--text-color));
+  color: var(--bg-color2);
   top: 72%;
   left: 4%;
   animation-duration: 36s;
@@ -130,7 +150,7 @@
   box-shadow: 30vmin 0 2.2199229893447095vmin currentColor;
 }
 .background span:nth-child(12) {
-  color: rgb(var(--color-solid));
+  color: var(--color-solid);
   top: 49%;
   left: 84%;
   animation-duration: 7s;
@@ -139,7 +159,7 @@
   box-shadow: 30vmin 0 2.187476176286807vmin currentColor;
 }
 .background span:nth-child(13) {
-  color: rgb(var(--color-solid));
+  color: var(--color-solid);
   top: 44%;
   left: 59%;
   animation-duration: 103s;

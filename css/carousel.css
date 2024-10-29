@@ -32,7 +32,7 @@
 }
 
 .ms--images {
-  left: calc(50% - 280px);
+  left: calc(60% - 350px);
 }
 .ms--images.ms-container--horizontal .ms-track {
   left: -70px;
@@ -96,8 +96,8 @@
 
 .ms--numbers {
   position: absolute;
-  left: calc(50% - 380px);
-  top: calc(50% - 300px);
+  left: calc(35% - 350px);
+  top: calc(25% - 200px);
   z-index: -1;
   pointer-events: none;
 }
@@ -113,18 +113,18 @@
   overflow: hidden;
 }
 .ms--titles.ms-container--vertical {
-  width: 400px;
-  height: 170px;
+  width: 350px;
+  height: 90px;
   max-height: 100%;
 }
 .ms--titles.ms-container--vertical .ms-track {
   flex-direction: column;
-  top: calc(50% - 85px);
+  top: calc(50% - 45px);
 }
 .ms--titles.ms-container--vertical.ms-container--reverse .ms-track {
   flex-direction: column-reverse;
   top: auto;
-  bottom: calc(50% - 85px);
+  bottom: calc(50% - 45px);
 }
 .ms--titles.ms-container--vertical .ms-slide {
   display: flex;
@@ -141,8 +141,8 @@
 .ms--titles .ms-slide {
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 170px;
+  width: 350px;
+  height: 90px;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -150,8 +150,8 @@
 
 .ms--titles {
   position: absolute;
-  left: calc(40% - 430px);
-  top: calc(40% - 85px);
+  left: calc(15% - 175px);
+  top: calc(40% - 45px);
   z-index: 1;
   pointer-events: none;
 }
@@ -174,18 +174,18 @@
   overflow: hidden;
 }
 .ms--descriptions.ms-container--vertical {
-  width: 400px;
-  height: 100px;
+  width: 350px;
+  height: 90px;
   max-height: 100%;
 }
 .ms--descriptions.ms-container--vertical .ms-track {
   flex-direction: column;
-  top: calc(50% - 50px);
+  top: calc(50% - 45px);
 }
 .ms--descriptions.ms-container--vertical.ms-container--reverse .ms-track {
   flex-direction: column-reverse;
   top: auto;
-  bottom: calc(50% - 50px);
+  bottom: calc(50% - 45px);
 }
 .ms--descriptions.ms-container--vertical .ms-slide {
   display: flex;
@@ -202,8 +202,8 @@
 .ms--descriptions .ms-slide {
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 100px;
+  width: 350px;
+  height: 90px;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -211,10 +211,12 @@
 
 .ms--descriptions {
   position: absolute;
-  left: calc(40% - 430px);
-  top: calc(60% - 20px);
+  left: calc(10% - 175px);
+  left: calc(15% - 175px);
+  top: calc(65% - 45px);
   z-index: 1;
   pointer-events: none;
+  text-align: left;
 }
 .ms--descriptions .ms-- .ms-track {
   white-space: normal;
@@ -260,9 +262,11 @@
 
 .ms--links {
   position: absolute;
-  left: calc(50% - 420px);
-  top: calc(50% + 105px);
+  left: calc(20% - 175px + 2.5rem);
+  top: calc(100% - 45px);
   z-index: 1;
+  pointer-events: none;
+  text-align: left;
 }
 .ms--links .ms-track {
   white-space: normal;
@@ -277,7 +281,7 @@
 .pagination {
   display: flex;
   position: absolute;
-  left: calc(50% - 420px);
+  left: 40%;
   top: 100%;
   list-style: none;
   margin: 0;
@@ -317,47 +321,6 @@
   opacity: 1;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 619px) {
-  .ms--numbers {
-    left: calc(50% - 120px);
-    top: calc(30% - 300px);
-  }
-  .ms--titles {
-    left: calc(50% - 200px);
-    top: calc(1% - 85px);
-    text-align: center;
-  }
-  .ms--descriptions {
-    left: calc(100% - 350px + 20px);
-    top: calc(80% - 50px);
-    background-color: rgba(var(--bg-color1), 0.7);
-  }
-  .ms--links {
-    left: calc(50% - 60px);
-    top: calc(70% + 30px + 50px);
-  }
-  .pagination {
-    left: 50%;
-    top: calc(100% + 15px);
-    transform: translateX(-50%);
-  }
-}
-@media screen and (max-width: 600px) {
-  .ms--images {
-    overflow: visible;
-  }
-}
-@media screen and (max-width: 400px) {
-  .ms--titles .ms-slide {
-    transform: scale(0.8);
-  }
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 a {
   color: rgba(var(--color-solid), 1);
   text-decoration: none;
@@ -390,3 +353,258 @@ a {
   justify-content: center;
   flex: 1;
 } /*# sourceMappingURL=carousel.css.map */
+
+}
+
+/* Pour mobile (orientation: portrait) */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .ms--numbers {
+    left: calc(100% - 350px);
+    top: calc(5% - 200px);
+  }
+  .ms--images {
+    position: relative;
+    overflow: hidden;
+  }
+  .ms--images.ms-container--horizontal {
+    width: 100%;
+    height: 300px;
+    max-width: 100%;
+  }
+  .ms--images.ms-container--horizontal .ms-track {
+    left: calc(50% - 262.5px);
+  }
+  .ms--images.ms-container--horizontal .ms-slide {
+    display: inline-flex;
+  }
+  .ms--images .ms-track {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .ms--images .ms-slide {
+    align-items: center;
+    justify-content: center;
+    width: 525px;
+    height: 300px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .ms--images {
+    left: calc(50% - 175px);
+    overflow: visible;
+  }
+  .ms--images .ms-slide__image-container {
+    width: 90%;
+    height: 80%;
+  }
+  .ms--titles {
+    left: calc(50% - 175px);
+    top: calc(1% - 45px);
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  .ms--titles .ms-slide {
+    transform: scale(0.8);
+  }
+  .ms--descriptions {
+    left: calc(50% - 175px);
+    top: calc(75% - 45px);
+    background-color: rgba(var(--bg-color1), 0.7);
+    text-align: center;
+  }
+  .ms--links {
+    left: calc(50% - 60px);
+    top: calc(85% + 30px);
+  }
+  .pagination {
+    left: 50%;
+    top: calc(85% + 30px + 5rem);
+    transform: translateX(-50%);
+  }
+}
+/* Pour tablette (orientation: paysage) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .ms--numbers {
+    left: calc(50% - 350px);
+    top: calc(5% - 200px);
+  }
+  .ms--titles {
+    left: calc(50% - 175px);
+    top: calc(10% - 45px);
+    justify-content: center;
+    text-align: center;
+    font-size: 0.5rem;
+  }
+  .ms--titles .ms-slide {
+    transform: scale(0.8);
+  }
+  .ms--images {
+    left: calc(60% - 350px);
+    overflow: visible;
+  }
+  .ms--images.ms-container--horizontal .ms-track {
+    left: -50px;
+  }
+  .ms--images .ms-slide__image-container {
+    width: 75%;
+    height: 75%;
+  }
+  .ms--titles {
+    top: calc(5% - 45px);
+    font-size: 0.9rem;
+  }
+  .ms--descriptions {
+    left: calc(5% - 175px);
+    top: calc(50% - 45px);
+    text-align: right;
+  }
+  .ms--links {
+    left: calc(50% - 60px);
+    top: calc(80% + 30px);
+    text-align: center;
+  }
+  .pagination {
+    left: 50%;
+    top: calc(100% + 15px);
+    transform: translateX(-50%);
+  }
+}
+/* Pour Laptop (orientation: paysage) */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .ms--images {
+    left: calc(60% - 350px);
+  }
+  .ms--images.ms-container--horizontal .ms-track {
+    left: -50px;
+  }
+  .ms--images .ms-slide__image-container {
+    width: 75%;
+    height: 75%;
+  }
+  .ms--numbers {
+    left: calc(35% - 350px);
+    top: calc(25% - 200px);
+  }
+  .ms--titles {
+    left: calc(10% - 175px);
+    top: calc(40% - 45px);
+  }
+  .ms--descriptions {
+    left: calc(6% - 175px);
+    top: calc(70% - 45px);
+  }
+  .ms--links {
+    left: calc(20% - 175px);
+    top: calc(100% - 45px);
+  }
+}
+/* Pour Screen 4K (orientation: paysage) */
+@media all and (min-width: 1441px) {
+  .ms--images {
+    position: relative;
+    overflow: hidden;
+  }
+  .ms--images.ms-container--horizontal {
+    width: 100%;
+    height: 800px;
+    max-width: 100%;
+  }
+  .ms--images.ms-container--horizontal .ms-track {
+    left: calc(50% - 675px);
+  }
+  .ms--images.ms-container--horizontal .ms-slide {
+    display: inline-flex;
+  }
+  .ms--images .ms-track {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .ms--images .ms-slide {
+    align-items: center;
+    justify-content: center;
+    width: 1350px;
+    height: 800px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .ms--images {
+    left: calc(40% - 675px);
+  }
+  .ms--images.ms-container--horizontal .ms-track {
+    left: -50px;
+  }
+  .ms--images .ms-slide__image-container {
+    width: 95%;
+    height: 95%;
+  }
+  .ms--numbers {
+    left: calc(35% - 675px);
+    top: calc(25% - 400px);
+    overflow: visible;
+  }
+  .ms--titles {
+    left: calc(15% - 175px);
+    top: calc(25% - 45px);
+    font-size: 1.5rem;
+    overflow: visible;
+    text-align: left;
+  }
+  .ms--descriptions {
+    left: calc(6% - 175px);
+    top: calc(70% - 45px);
+    overflow: visible;
+  }
+  .ms--links {
+    position: relative;
+    overflow: hidden;
+  }
+  .ms--links.ms-container--vertical {
+    width: 350px;
+    height: 120px;
+    max-height: 100%;
+  }
+  .ms--links.ms-container--vertical .ms-track {
+    flex-direction: column;
+    top: calc(50% - 60px);
+  }
+  .ms--links.ms-container--vertical .ms-slide {
+    display: flex;
+    flex-direction: column;
+  }
+  .ms--links .ms-track {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .ms--links .ms-slide {
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 120px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .ms--links {
+    left: calc(6% - 175px);
+    top: 13rem;
+  }
+  .pagination {
+    left: 45%;
+    transform: scale(1.5);
+  }
+}/*# sourceMappingURL=carousel.css.map */

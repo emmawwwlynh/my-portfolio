@@ -382,7 +382,7 @@ input:checked + .slider:before {
 .quality-container {
   perspective: 30em;
   width: 30%;
-  height: 11em;
+  height: 30vh;
   align-self: start;
 }
 
@@ -494,8 +494,16 @@ input:checked + .slider:before {
   animation: slideUp 1s ease-out forwards;
 }
 
-.projects-section {
-  padding-top: 2rem;
+/* Animation pour faire apparaître le bloc depuis le bas */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px); /* Le bloc commence plus bas */
+    opacity: 0; /* Transparent */
+  }
+  100% {
+    transform: translateY(0); /* Le bloc arrive à sa position normale */
+    opacity: 1; /* Complètement visible */
+  }
 }
 
 .carousel-container {
@@ -563,11 +571,11 @@ input:checked + .slider:before {
 }
 
 form {
-  width: 60%;
-  height: 75%;
+  width: 70%;
+  height: 80%;
   border: 1px solid rgba(var(--color-solid), 1);
   margin: auto;
-  padding: 1.5em;
+  padding: 1em;
   background: none;
   color: rgba(var(--text-color), 1);
   border-radius: 12px;
@@ -600,7 +608,7 @@ textarea::placeholder {
 }
 
 #message {
-  height: 25%;
+  height: 30%;
   font-size: 1em;
   overflow: auto;
   resize: vertical;
@@ -613,7 +621,7 @@ textarea::placeholder {
   justify-content: center;
   width: 100%;
   margin: 1em auto;
-  max-width: 25%;
+  max-width: 35%;
 }
 
 /*Footer*/
@@ -660,14 +668,9 @@ footer {
 }
 
 /* Responsive styles */
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
-/*@media screen and (max-width: 1280px)
-/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
-/*@media all and (min-width: 1024px) and (max-width: 1280px)
-/* Sur tous types d'écrans orientés verticalement 
-@media all and (orientation: portrait)*/
+/* Pour mobile (orientation: portrait) */
 
-@media only screen and (min-width: 320px) and (max-width: 619px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   :root {
     --font-size-base: 16px;
     --font-size-heading: 2em;
@@ -682,9 +685,13 @@ footer {
     height: max-content;
     padding-top: 0;
     padding-bottom: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: center;
+  }
+
+  .projects-section {
+    height: 100vh;
   }
 
   h2 {
@@ -738,7 +745,7 @@ footer {
 
   .quality-container {
     width: 100%;
-    height: 18em;
+    height: 15em;
   }
 
   .all-icons-stack-container {
@@ -771,7 +778,7 @@ footer {
   }
 
   #contactForm button {
-    max-width: 100%;
+    max-width: 60%;
   }
 
   footer {
@@ -780,23 +787,108 @@ footer {
   .legal {
     display: none;
   }
+}
 
-  /* Animation pour faire apparaître le bloc depuis le bas */
-  @keyframes slideUp {
-    0% {
-      transform: translateY(100px); /* Le bloc commence plus bas */
-      opacity: 0; /* Transparent */
-    }
-    100% {
-      transform: translateY(0); /* Le bloc arrive à sa position normale */
-      opacity: 1; /* Complètement visible */
-    }
+/* Pour mobile (orientation: paysage) */
+@media only screen and (min-width: 618px) and (max-width: 767px) {
+  .projects-section {
+    height: 175vh;
   }
 }
 
-/* Ajustements pour les petits écrans */
-@media (max-width: 768px) {
+/* Pour tablette (orientation: paysage) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --font-size-base: 16px;
+    --font-size-heading: 2em;
+    --line-height: 1.6;
+  }
+
+  /* pour chaque sections */
+  .about-section {
+    height: 150vh;
+  }
+
+  .projects-section,
+  .education-section,
+  .contact-section {
+    height: 100vh;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+  }
+
+  .contact-section {
+    text-align: left;
+  }
+
+  .quality-container {
+    width: 45%;
+    height: 13em;
+  }
+
+  .back {
+    padding-top: 2rem;
+  }
+
+  .all-icons-stack-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .icon-stack {
+    width: 4em;
+    height: 4em;
+  }
+
+  form {
+    width: 95%;
+    height: 85%;
+    padding: 1em;
+  }
+
+  #message {
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--color-solid)) rgb(var(--text-color));
+  }
+
+  footer {
+    height: 5em;
+  }
+  .legal {
+    display: none;
+  }
 }
 
-@media (max-width: 1024px) {
+/* Pour Laptop (orientation: paysage) */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  /* pour chaque sections */
+  .about-section {
+    height: 150vh;
+  }
+  .quality-container {
+    width: 45%;
+  }
+}
+
+/* Pour Screen 4K (orientation: paysage) */
+@media all and (min-width: 1441px) {
+  :root {
+    --font-size-base: 30px;
+    --font-size-heading: 2em;
+    --line-height: 1.6;
+  }
+
+  .navbar {
+    height: 10vh;
+  }
+
+  form {
+    width: 60%;
+    height: 60%;
+    transform: scale(1.1);
+  }
 }

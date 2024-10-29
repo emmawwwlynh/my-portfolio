@@ -352,8 +352,6 @@ a {
   align-items: center;
   justify-content: center;
   flex: 1;
-} /*# sourceMappingURL=carousel.css.map */
-
 }
 
 /* Pour mobile (orientation: portrait) */
@@ -391,8 +389,8 @@ a {
     width: 525px;
     height: 300px;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    user-select: none;
   }
   .ms--images {
     left: calc(50% - 175px);
@@ -535,8 +533,8 @@ a {
     width: 1350px;
     height: 800px;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    user-select: none;
   }
   .ms--images {
     left: calc(40% - 675px);
@@ -596,8 +594,8 @@ a {
     width: 350px;
     height: 120px;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    user-select: none;
   }
   .ms--links {
     left: calc(6% - 175px);
@@ -607,4 +605,4 @@ a {
     left: 45%;
     transform: scale(1.5);
   }
-}/*# sourceMappingURL=carousel.css.map */
+} /*# sourceMappingURL=carousel.css.map */

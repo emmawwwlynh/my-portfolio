@@ -47,8 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeWriter();
   }
-
-  // Démarrer l'animation
   typeWriter();
 
   // Sélectionnez le bouton burger et le menu

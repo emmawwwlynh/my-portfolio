@@ -182,7 +182,7 @@ $ms-numbers-slide-height: 240px;
 
 .ms--numbers {
   position: absolute;
-  left: calc(35% - $ms-images-slide-width / 2);
+  left: calc(40% - $ms-images-slide-width / 2);
   top: calc(25% - $ms-images-slide-height / 2);
   z-index: -1;
   pointer-events: none;
@@ -400,16 +400,12 @@ a {
   $ms-images-slide-height: 300px;
   @include ms(
     $cssClass: "ms--images",
-    $slider-length: 100%,
-    $slider-center: false,
     $slide-width: $ms-images-slide-width,
-    $slide-height: $ms-images-slide-height,
-    $vertical: false,
-    $reverse: false
+    $slide-height: $ms-images-slide-height
   );
 
   .ms--images {
-    left: calc(50% - $ms-titles-slide-width / 2);
+    left: -20vw;
     overflow: visible;
 
     .ms-slide__image-container {
@@ -430,11 +426,24 @@ a {
     }
   }
 
+  $ms-descriptions-slide-width: 100vw;
+  $ms-descriptions-slide-height: 10vh;
+
+  @include ms(
+    $cssClass: "ms--descriptions",
+    $slider-length: $ms-descriptions-slide-width,
+    $slide-width: $ms-descriptions-slide-width,
+    $slide-height: $ms-descriptions-slide-height
+  );
+
   .ms--descriptions {
-    left: calc(50% - $ms-descriptions-slide-width / 2);
-    top: calc(75% - $ms-descriptions-slide-height / 2);
-    background-color: rgba(var(--bg-color1), 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    left: 25vw;
+    top: 12vh;
+    background-color: rgba(var(--bg-color1), 0.7);
   }
 
   .ms--links {

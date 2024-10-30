@@ -99,7 +99,7 @@ header {
   box-shadow: 0 5px 10px -5px rgba(var(--color-border), 0.6),
     0 5px 15px 0px rgba(var(--color-border), 0.4),
     0 5px 25px 5px rgba(var(--color-border), 0.3);
-  transition: box-shadow 0.4s ease-in-out;
+  transition: top 0.4s ease;
 }
 
 .navbar:hover {
@@ -271,7 +271,6 @@ input:checked + .slider:before {
   font-size: 5em;
   color: rgba(var(--text-color), 1);
   text-shadow: 2px 2px 2px rgba(var(--color-solid), 0.8);
-  border-right: 3px solid rgba(var(--text-color), 1);
 }
 
 .title-name {
@@ -282,14 +281,17 @@ input:checked + .slider:before {
   text-shadow: 2px 2px 2px rgba(var(--text-color), 0.8);
 }
 
-.cursor {
-  display: inline-block;
-  color: rgba(var(--text-color), 1);
-  animation: blink 0.7s step-end infinite;
-  transition: opacity 0.6s ease-in-out;
+.hello {
+  font-family: var(--font-text);
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 2px rgba(var(--text-color), 0.8);
 }
 
-/* Animation de clignotement du cursor */
+.cursor {
+  opacity: 1;
+}
+
 @keyframes blink {
   0%,
   50% {
@@ -301,11 +303,11 @@ input:checked + .slider:before {
   }
 }
 
-.hello {
-  font-family: var(--font-text);
-  font-size: 1.8em;
-  letter-spacing: 0.1em;
-  text-shadow: 2px 2px 2px rgba(var(--text-color), 0.8);
+.cursor {
+  display: inline-block;
+  width: 0.5rem;
+  vertical-align: baseline;
+  animation: blink 0.7s step-end infinite;
 }
 
 /*Bouton skeuomorphic */
@@ -700,6 +702,7 @@ footer {
 
   .burger-menu {
     display: block;
+    transition: top 0.4s ease;
   }
 
   /* Cacher le menu par défaut sur petits écrans */

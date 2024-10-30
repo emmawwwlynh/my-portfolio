@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeWriter();
   }
-  typeWriter();
 
   // Sélectionnez le bouton burger et le menu
   const burgerMenu = document.getElementById("burgerMenu");

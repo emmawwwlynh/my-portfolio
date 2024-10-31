@@ -99,7 +99,7 @@ header {
   box-shadow: 0 5px 10px -5px rgba(var(--color-border), 0.6),
     0 5px 15px 0px rgba(var(--color-border), 0.4),
     0 5px 25px 5px rgba(var(--color-border), 0.3);
-  transition: top 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .navbar:hover {
@@ -263,14 +263,14 @@ input:checked + .slider:before {
 }
 
 .title-job {
-  display: inline-block;
+  display: inline;
   white-space: nowrap;
   overflow: hidden;
   font-family: var(--font-title);
   text-transform: uppercase;
   font-size: 5em;
   color: rgba(var(--text-color), 1);
-  text-shadow: 2px 2px 2px rgba(var(--color-solid), 0.8);
+  transition: opacity 0.5s ease;
 }
 
 .title-name {
@@ -359,10 +359,10 @@ input:checked + .slider:before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(../img/portrait-profile.png) no-repeat top center fixed;
+  background: url(../img/bg-about.webp) no-repeat top center fixed;
   background-size: cover;
   background-position: top;
-  opacity: 0.25;
+  opacity: 0.5;
   z-index: -1;
 }
 

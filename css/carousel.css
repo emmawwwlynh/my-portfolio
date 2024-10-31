@@ -41,13 +41,13 @@
   background-image: url("../img/computer.jpeg");
 }
 .ms--images .ms-slide:nth-child(2) .ms-slide__image {
-  background-image: url("../img/project2-immo.JPG");
+  background-image: url("../img/project2-immo.webp");
 }
 .ms--images .ms-slide:nth-child(3) .ms-slide__image {
   background-image: url("../img/portrait-profile.png");
 }
 .ms--images .ms-slide:nth-child(4) .ms-slide__image {
-  background-image: url("../img/project4-portfolio.JPG");
+  background-image: url("../img/project4-portfolio.webp");
 }
 .ms--images .ms-slide__image-container {
   width: 80%;
@@ -275,7 +275,13 @@
   font-weight: 600;
   padding: 5px 0 8px;
   border-bottom: 2px solid rgb(var(--text-color));
+  text-decoration: none;
   cursor: pointer;
+  color: rgba(var(--color-solid), 1);
+}
+.ms--links .ms-slide__link:hover {
+  cursor: pointer;
+  color: red;
 }
 
 .pagination {
@@ -295,7 +301,6 @@
   width: 36px;
   height: 20px;
   margin: 0 5px;
-  cursor: pointer;
 }
 .pagination__button:before, .pagination__button:after {
   content: "";
@@ -303,7 +308,7 @@
   left: 0;
   top: calc(50% - 1px);
   width: 100%;
-  box-shadow: 0 1px 4px rgb(var(--color-solid));
+  box-shadow: 0 1px 4px rgb(var(--text-color));
 }
 .pagination__button:before {
   height: 2px;
@@ -311,7 +316,7 @@
 }
 .pagination__button:after {
   height: 3px;
-  background-color: rgb(var(--color-border));
+  background-color: rgb(var(--text-color));
   opacity: 0;
   transition: 0.8s opacity;
 }
@@ -320,12 +325,13 @@
   opacity: 1;
 }
 
+/*
 a {
-  color: rgba(var(--color-solid), 1);
+  color: $color-primary;
   text-decoration: none;
   cursor: pointer;
 }
-
+*/
 .container {
   position: relative;
   display: flex;

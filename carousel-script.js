@@ -1,13 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Code d'initialisation des sliders
+  const projectLinks = [
+    "https://link-to-project-1.com", // Site Vitrine
+    "https://toucanpropertyphuket.com/", // Site Immobilier
+    "https://link-to-project-3.com", // Site E-Commerce
+    "https://link-to-project-4.com", // Portfolio
+  ];
 
+  // Code d'initialisation des sliders
   (function () {
     const slidersContainer = document.querySelector(".sliders-container");
     const pagination = document.querySelector(".pagination");
-    if (!pagination) return;
+
+    if (!pagination || !slidersContainer) {
+      console.error("Pagination or Sliders Container not found!");
+      return;
+    }
 
     const paginationItems = Array.from(pagination.children);
-    if (paginationItems.length === 0) return;
+    if (paginationItems.length === 0) {
+      console.error("No pagination items found!");
+      return;
+    }
 
     // Initializing the numbers slider
     const msNumbers = new MomentumSlider({
@@ -58,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const msDescriptions = new MomentumSlider({
       el: slidersContainer,
       cssClass: "ms--descriptions",
-      range: [0, 3],
+      range: [0, descriptions.length - 1],
       rangeContent: function (i) {
         return `<p>${descriptions[i]}</p>`;
       },
@@ -74,34 +87,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const msLinks = new MomentumSlider({
       el: slidersContainer,
       cssClass: "ms--links",
-      range: [0, 3],
-      rangeContent: function () {
-        return '<a class="ms-slide__link">Voir Le Projet</a>';
+      range: [0, projectLinks.length - 1],
+      rangeContent: function (i) {
+        console.log(`Setting link for project ${i + 1}: ${projectLinks[i]}`);
+        return `<a href="${projectLinks[i]}" target="_blank" class="ms-slide__link">Voir Le Projet</a>`;
       },
       vertical: true,
-      interactive: false,
+      interactive: true,
     });
 
     // Initializing the images slider
     const msImages = new MomentumSlider({
-      // Element to append the slider
       el: slidersContainer,
-      // CSS class to reference the slider
       cssClass: "ms--images",
-      // Generate the 4 slides required
       range: [0, 3],
       rangeContent: function () {
         return '<div class="ms-slide__image-container"><div class="ms-slide__image"></div></div>';
       },
-      // Syncronize the other sliders
       sync: [msNumbers, msTitles, msDescriptions, msLinks],
-      // Styles to interpolate as we move the slider
       style: {
         ".ms-slide__image": {
           transform: [{ scale: [1.5, 1] }],
         },
       },
-      // Update pagination if slider change
       change: function (newIndex, oldIndex) {
         if (typeof oldIndex !== "undefined") {
           paginationItems[oldIndex].classList.remove(

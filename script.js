@@ -91,12 +91,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
 
   if (navbar) {
+    navbar.style.transition = "transform 0.4s ease";
+
     window.addEventListener("scroll", function () {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
 
       // Si l'utilisateur fait défiler vers le bas, masquer la barre de navigation
-      navbar.style.top = scrollTop > lastScrollTop ? "-100px" : "0";
+      navbar.style.transform =
+        scrollTop > lastScrollTop ? "translateY(-100%)" : "translateY(0)";
       lastScrollTop = scrollTop;
     });
   }
